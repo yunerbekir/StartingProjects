@@ -1,0 +1,23 @@
+Every command must start with " > "
+
+>open <File Name> 				-opens the file if possible, if not creates an empty one
+>close    	    				-closes the current file and allows you to open another
+>save 		    				-saves information to the current open file
+>saveas <File Name> 				-saves file under specified name
+>create <Figure Type> <Parameters>   		-creates a figure of the desired type with parameters
+			
+			figure type: line	  parameters: PointX1 PointY1 PointX2 PointY2 Color<string>
+			figure type: circle	  parameters  CenterX CenterY Radius Color<string>
+			figure type: rectangle    parameters: PointX PointY Width Heigth Color<string>
+
+>print               		     		-prints all figures
+>erase <Figure Number> 		     		-deletes the figure at the chosen possition
+>translate <PointX> <PointY> 	     		-translates all figures 
+>translate <PointX> <PointY> <Figure Number>    -translates the chosen figure
+>within <Figure Type> <Parameters> 		-displays the figures within the inputed one
+		
+			figure type: circle	  parameters  CenterX CenterY Radius
+			figure type: rectangle    parameters: PointX PointY Width Heigth	
+>exit 						-to exit the application
+>cls						-to clear screen
+>help						-for help menu	  
