@@ -1,0 +1,4 @@
+101;Vacant;5;-1;Big family;414.000000;N/A;N/A;
+102;Occupied;2;2;Stuff;25.000000;Putin;02.02.1997-17.02.1997;1,2,3,4,5,
+103;Occupied;4;3;Batchelors partyyy;415.000000;Adolf;04.04.1945-17.02.1980;3,
+104;Occupied;2;2;Stuff;85.000000;Obama;02.04.1997-17.02.1998;4,5,
