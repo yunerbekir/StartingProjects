@@ -1,7 +1,7 @@
 #include"stdafx.h"
 #include "Line.h"
 
-Line::Line(double _StartX, double _StartY, double _EndX, double _EndY, std::string _Color)
+Line::Line(double _StartX=0, double _StartY=0, double _EndX=0, double _EndY=0, std::string _Color="N\\A")
 {
 	m_StartX = _StartX;
 	m_StartY = _StartY;

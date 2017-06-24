@@ -31,6 +31,5 @@ public:
 
 	// other methods
 	void Print()const override{ std::cout << *this; }
-	void ChangeColor(std::string& _Color) { SetColor(_Color); }
 	void Translate(double PointX, double PointY) override; 
 };

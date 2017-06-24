@@ -1,6 +1,6 @@
 Every command must start with " > "
 
->open <File Name>.<extension> -opens the file with the inputed name
+>open <File Name> -opens the file if possible, if not creates an empty one
 >close  -closes the current file and allows you to open another
 >save   -saves information to the current open file
 >saveas <File Name>                -saves file under specified name

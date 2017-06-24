@@ -11,8 +11,6 @@ class Rectangle :public Shape
 private:
 	double m_StartingPointX, m_StartingPointY;
 	double m_Height, m_Width;
-
-	
 public:
 	//constructors
 	Rectangle() { m_StartingPointX = m_StartingPointX = m_Height = m_Width = 0; }
@@ -34,7 +32,6 @@ public:
 
 	//other methods
 	void Print()const override { std::cout << *this; }
-	void ChangeColor(std::string& _Color) { SetColor(_Color); }
 	void Translate(double PointX, double PointY) override;
 	void SetCorrectPossition(); // If the rectangle is out of bounds
 								// This method displays a message of the

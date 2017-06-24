@@ -126,7 +126,7 @@ int main()
 				else if ((Command.substr(0, 7) == ">create"))
 				{
 					AddElementToCorrectVector(FormatString(Command.substr(8)));
-					std::cout << GetShapeName(Command.substr(8)) << "(" << ShapesCount << ") has been created successfuly.\n";
+					std::cout << "A "<<GetShapeName(Command.substr(8)) <<" has been created successfuly.\n";
 				}
 				else if ((Command.substr(0, 10)) == ">translate")
 				{
@@ -154,6 +154,7 @@ int main()
 					Within(Command.substr(8));
 				}
 				else if (Command.substr(0, 5) == ">help") Help();
+				else if (Command.substr(0, 4) == ">cls") system("cls");
 			}
 		}
 	}
@@ -186,6 +187,7 @@ void OpenFileAndLoadToMemory(std::string& _Directory)
 		std::cout << _Directory << "\n";
 		std::cerr << "File doesn't exist creating...\n";
 		File.open(_Directory, std::ios::out); // and so it creates that file.
+		SaveFile(_Directory);
 	}
 	else // if the file exists then we read from it
 	{
@@ -448,7 +450,8 @@ void WithinRectangle(Rectangle _Rectangle)
 }
 
 
-
+/// The folowing code is useless and its the remainder of a previous idea and is here 
+/// as a personal remainder 
 /*std::string FormatString(std::string _LineOfText) // format is "<number>" ... "<color>"
 {
 	int InsertionPossition = 0;

@@ -20,14 +20,17 @@ private:
 	std::string m_Color;
 
 protected:
-	void SetColor(std::string& _Color){m_Color = _Color;}
+	void SetColor(std::string& _Color)
+	{
+		m_Color = _Color;
+	}
 public:
 	std::string GetColor()const { return m_Color; };
 	Shape() { m_Color = "N\\A"; }
 	virtual void Print()const = 0;
 	virtual void Translate(double, double) = 0;
 	virtual double GetArea()const = 0;
-
+	void ChangeColor(std::string _Color) { SetColor(_Color); }
 };
 
 

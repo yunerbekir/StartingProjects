@@ -2,7 +2,7 @@
 #include "stdafx.h"
 #include "Rectangle.h"
 
-Rectangle::Rectangle(const double _StartingPointX, const double _StartingPointY, const double _Height, const double _Width, std::string _Color)
+Rectangle::Rectangle(const double _StartingPointX=0, const double _StartingPointY=0, const double _Height=0, const double _Width=0, std::string _Color="N\\A")
 {
 	m_StartingPointX = _StartingPointX;
 	m_StartingPointY = _StartingPointY;

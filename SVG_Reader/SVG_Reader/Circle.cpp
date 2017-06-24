@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "Circle.h"
 
-Circle::Circle(double _CenterX = 0, double _CenterY = 0, double _Radius = 0, std::string _Color = (std::string)"N\A")
+Circle::Circle(double _CenterX = 0, double _CenterY = 0, double _Radius = 0, std::string _Color = (std::string)"N\\A")
 {
 	m_CenterX = Mod(_CenterX);
 	m_CenterY = Mod(_CenterY);
@@ -43,8 +43,9 @@ Circle::Circle(std::string _LineOfText)
 
 	MemberStartingPossition = _LineOfText.find("\"", MemberStartingPossition + 1) + 1;
 	int LastComma = _LineOfText.find_last_of("\"");
-	SetColor(_LineOfText.substr(MemberStartingPossition, LastComma - MemberStartingPossition));
-	std::cout << GetColor();
+	ChangeColor(_LineOfText.substr(MemberStartingPossition, LastComma - MemberStartingPossition));
+	Print();
+	std::cout << "\n";
 }
 
 Circle::Circle(const Circle& _Circle)
@@ -52,7 +53,9 @@ Circle::Circle(const Circle& _Circle)
 	m_CenterX = _Circle.GetCenterX();
 	m_CenterY = _Circle.GetCenterY();
 	m_Radius = _Circle.GetRadius();
+	SetColor(_Circle.GetColor());
 }
+
 
 
 // translating the circle

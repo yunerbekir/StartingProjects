@@ -20,7 +20,7 @@ double Mod(double Number)
 
 std::string FormatString(std::string _LineOfText) // format is "<number>" ... "<color>"
 {
-	if (_LineOfText.find("/n") == std::string::npos) return _LineOfText;
+	if (_LineOfText.find("/>") != std::string::npos) return _LineOfText;
 	int InsertionPossition = 0;
 	_LineOfText.insert(PossitionOfFirstLetter(_LineOfText), "<");
 	while (true)
@@ -34,7 +34,7 @@ std::string FormatString(std::string _LineOfText) // format is "<number>" ... "<
 	InsertionPossition = PossitionOfFirstNumber(_LineOfText); // skipping the shape name
 	InsertionPossition = PossitionOfFirstLetter(_LineOfText, InsertionPossition); // finding the color possition
 	_LineOfText.insert(InsertionPossition, "\"");
-	_LineOfText += " "; // adding " " at the end of the string just in case
+	_LineOfText += " />"; // adding " " at the end of the string just in case
 	InsertionPossition = InsertionPossition = _LineOfText.find(" ", InsertionPossition);
 	_LineOfText.insert(InsertionPossition, "\""); // doing the same thing as with the numbers
 	return _LineOfText;
