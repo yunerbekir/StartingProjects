@@ -26,23 +26,16 @@ public:
 	void ChangeStatusOccupied() { m_RoomStatus = "Occupied"; }
 	void ClearRoom();
 	void FillUpRoom(std::vector<std::string>&,std::string);
+	void DisplayRoom(std::string)const;
+	void ChangeRoomInfo();
 
 	// selectors
 	int GetRoomNumber()const { return m_RoomNumber; };
 	std::string GetRoomStatus()const { return m_RoomStatus; }
-
-	// dont know
 	bool HasActivity(const int)const;
-	void DisplayRoom(std::string)const;
-	void ChangeRoomInfo();
+
 	
-
-	// for file output
-
-	// класът се казва Room и получавам следната грешка
-	// искам да не пиша селектор за всяко поле
-	// а просто с приятелска функция да получа достъп до 
-	// член функциите на класа. Plz help
+	// operators
 	friend std::ofstream& operator<<(std::ofstream&,Room&);
 
 	// printers
